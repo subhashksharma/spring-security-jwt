@@ -35,7 +35,7 @@ public class UserValidationController {
     }
 
     @PostMapping("/authenticate")
-    public String authenticateToken( @RequestBody AuthRequest authRequest) {
+    public String authenticateToken( @RequestBody AuthRequest authRequest) throws Exception {
         try {
             System.out.println("test");
             authenticationManager.authenticate( new UsernamePasswordAuthenticationToken(authRequest.getUserName()
